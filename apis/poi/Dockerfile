@@ -7,9 +7,9 @@ RUN dotnet restore
 
 # copy everything else and build
 COPY . ./
-RUN dotnet publish -c Release -o out
-COPY web/appsettings.*.json /app/out/
-COPY web/appsettings.json /app/out/
+RUN dotnet publish -c Release -o /app/out
+COPY ./web/appsettings.*.json /app/out/
+COPY ./web/appsettings.json /app/out/
 
 # creae a unit test image to run tests
 FROM microsoft/dotnet:2.1-sdk AS test-env
