@@ -61,7 +61,7 @@ namespace poi
             // Enable middleware to serve generated Swagger as a JSON endpoint.
             app.UseSwagger(c =>
                 c.RouteTemplate = "swagger/{documentName}/poi/swagger.json"
-            );
+//            );
 
             // Enable middleware to serve swagger-ui (HTML, JS, CSS, etc.),
             // specifying the Swagger JSON endpoint.
@@ -70,7 +70,7 @@ namespace poi
                 c.SwaggerEndpoint("/swagger/docs/poi/swagger.json", "Points Of Interest(POI) API V1");
                 c.DocumentTitle = "POI Swagger UI";
                 c.RoutePrefix = "api/docs/poi";
-            });
+ //           });
 
             app.UseMvc();
         }
